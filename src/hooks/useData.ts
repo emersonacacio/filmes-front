@@ -34,6 +34,7 @@ export function useData(): IUseData {
   useEffect(() => {
     handleDataPage()
   }, [handleDataPage])
+
   return {
     data,
     loading,
