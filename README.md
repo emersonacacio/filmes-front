@@ -24,4 +24,4 @@ Para disparar os testes use o comando:
 
 ### Deploy da aplicação
 
-O deploy da aplicação foi realizado no endereço [https://637af2ab05fb044606a8513c--darling-yeot-5c8e87.netlify.app/](https://637af2ab05fb044606a8513c--darling-yeot-5c8e87.netlify.app/).
+O deploy da aplicação foi realizado no endereço [https://timely-paprenjak-cecb8a.netlify.app/](https://timely-paprenjak-cecb8a.netlify.app/).
