@@ -17,6 +17,20 @@ export const ErrorArea = styled.div`
 export const ButtonArea = styled.div`
   margin-top: 1rem;
 `
+export const LoadingArea = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.grayBlueOpacity};
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `}
+`
 
 export const ResultsArea = styled.ul`
   height: 70vh;

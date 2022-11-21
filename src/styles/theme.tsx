@@ -34,6 +34,7 @@ export const theme = {
     darkGray: "#2E2F42",
     red: "#FF6347",
     blue: "#1a73e8",
+    grayBlueOpacity: "rgba(30,144,255,0.2)",
   },
   spacings: {
     xxsmall: "0.8rem",

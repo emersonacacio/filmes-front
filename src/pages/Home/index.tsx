@@ -1,12 +1,14 @@
+import MoonLoader from "react-spinners/MoonLoader"
 import { FilmCard } from "components/Card"
 import { Header } from "components/Header"
 import { PageSelect } from "components/PageSelect"
 import { useData } from "hooks/useData"
+import { theme } from "styles/theme"
 
 import * as S from "./styles"
 
 function Home(): JSX.Element {
-  const { data, error, page, setPage } = useData()
+  const { data, error, page, setPage, loading } = useData()
   return (
     <>
       <Header />
@@ -37,6 +39,11 @@ function Home(): JSX.Element {
           ))}
         </S.ResultsArea>
       </S.Main>
+      {loading && (
+        <S.LoadingArea>
+          <MoonLoader color={theme.colors.blue} size={50} />
+        </S.LoadingArea>
+      )}
     </>
   )
 }
