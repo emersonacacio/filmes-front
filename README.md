@@ -1,8 +1,8 @@
 # Descrição
-Esse projeto foi criado para consumir a API do  [News-API](https://newsapi.org/).
+Esse projeto foi criado para consumir a API de filmes a apresentar a listas de filmes.
 
 
-## Available Scripts
+## Comandos básicos
 
 Para iniciar o projeto uso o comando:
 
@@ -20,6 +20,3 @@ Para acessar o Storybook dos componentes execute o comando:
 Após a inicialização abra o endereço [http://localhost:6006](http://localhost:6006) no navegador. 
 
 
-## Uso da aplicação
-
-Para executar um consulta é preciso digitar a palavra chave e a data inicial e final do intervalo da pesquisa.
