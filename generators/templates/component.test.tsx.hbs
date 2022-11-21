@@ -3,7 +3,7 @@ import { render } from "helpers/test-utils"
 import { {{pascalCase name}} } from "."
 
 describe("< {{pascalCase name}} />", () => {
-  it("should exist in the document", () => {
+  it("Should exist in the document", () => {
     render(< {{pascalCase name}} />)
     expect(screen.getByText(/plop/i)).toBeInTheDocument()
   })

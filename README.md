@@ -8,7 +8,6 @@ Para iniciar o projeto uso o comando:
 
 ### `yarn start`
 
-
 Após a inicialização abra o endereço [http://localhost:3000](http://localhost:3000) no navegador.
 
 ### `yarn build`
@@ -19,6 +18,9 @@ Para acessar o Storybook dos componentes execute o comando:
 
 Após a inicialização abra o endereço [http://localhost:6006](http://localhost:6006) no navegador. 
 
+Para disparar os testes use o comando:
+
+### `yarn test`
 
 ### Deploy da aplicação
 
