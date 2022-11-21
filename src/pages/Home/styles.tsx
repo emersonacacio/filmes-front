@@ -9,22 +9,13 @@ export const Main = styled.main`
 
 export const ErrorArea = styled.div`
   ${({ theme }) => css`
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-size: ${theme.font.sizes.small};
     color: ${theme.colors.red};
   `}
 `
-export const InputArea = styled.div`
-  display: flex;
-
-  flex-direction: row;
-  column-gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  ${media.lessThan("medium")`
-    flex-direction: column;
-    row-gap:1rem;
-   `}
+export const ButtonArea = styled.div`
+  margin-top: 1rem;
 `
 
 export const ResultsArea = styled.ul`

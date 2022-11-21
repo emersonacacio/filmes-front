@@ -4,6 +4,7 @@ import * as S from "./styles"
 export type PageSelectProps = {
   page: number
   pageNumber: number
+  // eslint-disable-next-line
   handlePage?: (page: number) => void
 }
 

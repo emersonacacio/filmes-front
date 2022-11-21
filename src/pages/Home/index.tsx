@@ -1,41 +1,24 @@
 import { FilmCard } from "components/Card"
 import { Header } from "components/Header"
+import { PageSelect } from "components/PageSelect"
 import { useData } from "hooks/useData"
 
 import * as S from "./styles"
 
 function Home(): JSX.Element {
-  const { data, error } = useData()
+  const { data, error, page, setPage } = useData()
   return (
     <>
       <Header />
       <S.Main>
-        {/* <S.InputArea>
-          <Input
-            value={keyword}
-            onChange={handleChangeKeyword}
-            title="Palavra chave"
-            errorMessage="Voçê precisa digitar a palavra chave"
-            isError={isErrorKeyword}
+        <S.ButtonArea>
+          <PageSelect
+            page={page}
+            pageNumber={data.pageNumber}
+            handlePage={setPage}
           />
-          <Input
-            value={startData}
-            type="date"
-            title="Data inicial"
-            onChange={handleStartData}
-            errorMessage="Voçê precisa digitar a data inicial"
-            isError={isErrorStartData}
-          />
-          <Input
-            type="date"
-            value={endData}
-            onChange={handleEndData}
-            title="Data Final"
-            errorMessage="Voçê precisa digitar a data final"
-            isError={isErrorEndData}
-          />
-          <Button onClick={handleClickSearch}>Pesquisar</Button>
-        </S.InputArea> */}
+        </S.ButtonArea>
+
         {error && (
           <S.ErrorArea>
             Ocorreu um erro na requisição, tente em outro momento!
