@@ -1,4 +1,4 @@
-import { MouseEventHandler, useState } from "react"
+import { MouseEventHandler, useState, useCallback } from "react"
 import { TriangleUp } from "@styled-icons/entypo"
 import * as S from "./styles"
 
@@ -19,12 +19,12 @@ export const FilmCard = ({
 }: FilmCardProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleClickShowDescription: MouseEventHandler<HTMLDivElement> = () => {
-    setIsOpen(!isOpen)
-  }
-  const handleTitleOpenButton = isOpen
-    ? "Ocultar a descrição"
-    : "Mostra a descrição"
+  const handleClickShowDescription: MouseEventHandler<HTMLDivElement> =
+    useCallback(() => {
+      setIsOpen(!isOpen)
+    }, [isOpen])
+
+  const buttonText = isOpen ? "Ocultar a descrição" : "Mostrar a descrição"
 
   return (
     <S.WrapperFilmCard>
@@ -36,11 +36,11 @@ export const FilmCard = ({
           <S.Subtitle>Produtor: {producer}</S.Subtitle>
         </S.TitleArea>
         <S.OpenButton
-          title={handleTitleOpenButton}
+          title={buttonText}
           isOpen={isOpen}
           onClick={handleClickShowDescription}
         >
-          {handleTitleOpenButton} <TriangleUp />
+          {buttonText} <TriangleUp />
         </S.OpenButton>
       </S.DataArea>
 

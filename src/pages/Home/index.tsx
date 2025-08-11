@@ -27,7 +27,7 @@ function Home(): JSX.Element {
           </S.ErrorArea>
         )}
         <S.ResultsArea>
-          {data.films.map((film) => (
+          {data.films?.map((film) => (
             <FilmCard
               key={film.id}
               title={film.title}

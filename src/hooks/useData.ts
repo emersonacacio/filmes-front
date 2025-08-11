@@ -27,8 +27,9 @@ export function useData(): IUseData {
       console.error(err)
       setData(initialSate)
       setError(true)
+    } finally {
+      setLoading(false)
     }
-    setLoading(false)
   }, [page])
 
   useEffect(() => {
