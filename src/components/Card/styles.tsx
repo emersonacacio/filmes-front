@@ -49,17 +49,29 @@ export const Description = styled.div`
   `}
 `
 
-export const OpenButton = styled.div<IOpenButton>`
+export const OpenButton = styled.button<IOpenButton>`
   ${({ theme, isOpen = false }) =>
     css`
       align-self: flex-end;
       font-size: ${theme.font.sizes.small};
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: inherit;
+      padding: 0.25rem;
       svg {
         height: ${theme.font.sizes.large};
         transform: rotate(${isOpen ? "0" : "180"}deg);
       }
       &:hover {
-        cursor: pointer;
+        opacity: 0.8;
+      }
+      &:focus {
+        outline: 2px solid ${theme.colors.black};
+        outline-offset: 2px;
       }
     `}
 `
