@@ -6,7 +6,7 @@ describe("< Header />", () => {
   it("Should have the specified style", () => {
     render(<Header />)
 
-    const wrapper = screen.getByLabelText("Header da aplicação")
+    const wrapper = screen.getByLabelText("Cabeçalho da aplicação")
     expect(wrapper).toHaveStyle({
       "text-align": "center",
       padding: "1rem 0 1rem 0",

@@ -38,7 +38,14 @@
     "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off",
     "react/no-array-index-key": "off",
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "import/no-extraneous-dependencies": "off",
