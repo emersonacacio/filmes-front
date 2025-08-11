@@ -30,8 +30,8 @@ describe("< FilmCard />", () => {
     render(<FilmCard {...props}>Test</FilmCard>)
 
     const description = screen.queryByText(props.description)
-    expect(description).not
-    const button = screen.getByText("Mostra a descrição")
+    expect(description).not.toBeInTheDocument()
+    const button = screen.getByText("Mostrar a descrição")
 
     act(() => {
       button.click()
